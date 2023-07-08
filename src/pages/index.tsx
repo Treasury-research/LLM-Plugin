@@ -81,7 +81,7 @@ export default function Home() {
 				title: "Send Failed!",
 				position: "top-right",
 				description: error.message || "Send message error!",
-				status: "warning",
+				status: "error",
 				duration: 3000,
 				isClosable: true,
 			});
@@ -155,7 +155,7 @@ export default function Home() {
 										<Flex w="full" justify="flex-start">
 											<Box
 												key={index}
-												bg="red.300"
+												bg="red.200"
 												px={4}
 												py={2}
 												borderRadius={3}
@@ -186,10 +186,9 @@ export default function Home() {
 													px={0}
 													className="md"
 												>
-													<ReactMarkdown
-														children={item.content}
-														remarkPlugins={[remarkGfm]}
-													/>
+													<ReactMarkdown remarkPlugins={[remarkGfm]}>
+														{item.content}
+													</ReactMarkdown>
 												</Box>
 
 												<Box w="full" h="300px">
