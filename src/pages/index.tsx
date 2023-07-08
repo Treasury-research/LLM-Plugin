@@ -247,8 +247,10 @@ export default function Home() {
 									color="blue.500"
 									boxSize={6}
 									onClick={() => {
-										addChat();
-										onSend();
+										if (nl_input) {
+											addChat();
+											onSend();
+										}
 									}}
 								/>
 							)}
