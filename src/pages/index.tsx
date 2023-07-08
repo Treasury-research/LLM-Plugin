@@ -40,9 +40,7 @@ export default function Home() {
 
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [chatList, setChatList] = useState<any>([]);
-	const [nl_input, setNl_input] = useState(
-		"give me the top 50 LENS engagers order by score"
-	);
+	const [nl_input, setNl_input] = useState("");
 	const [isLoading, setIsLoading] = useBoolean(false);
 	const [chatCode, setChatCode] = useState("");
 
