@@ -30,10 +30,6 @@ import BeatLoader from "react-spinners/BeatLoader";
 import Empty from "components/Empty";
 import { WarningIcon } from "@chakra-ui/icons";
 
-const url =
-	process.env.NEXT_PUBLIC_API_DOMAIN ||
-	"https://knn3-gateway.knn3.xyz/nl/api/chat";
-
 const list: any = [];
 
 export default function Home() {
@@ -62,12 +58,11 @@ export default function Home() {
 		setIsLoading.on();
 
 		try {
-			const result = await axios.get(url, {
+			const result = await axios.get("/api/chat", {
 				params: { chat_id: chat_id.trim(), nl_input: nl_input.trim() },
-				headers: {
-					"auth-key": "44a6a613-4e21-478b-a909-ab653c9d39df",
-				},
 			});
+
+			console.log(result);
 
 			if (result.status === 200) {
 				list.push(result.data);
