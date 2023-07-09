@@ -6,7 +6,7 @@
 		"pm2:prod": "pm2 start npm --name 'Demo' -- run start",
 		"dev": "cross-env NODE_ENV=development next dev",
 		"build": "next build",
-		"start": "next start -p 7001",
+		"start": "next start -p 3001",
 		"lint": "next lint"
 	},
 	"dependencies": {
