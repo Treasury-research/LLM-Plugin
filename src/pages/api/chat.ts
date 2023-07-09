@@ -31,7 +31,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 				data: "handle error!",
 			});
 		}
-	} catch (error) {
+	} catch (error:any) {
 		console.log(error);
 		res.status(500).json({
 			code: -1,
