@@ -31,7 +31,8 @@ import Empty from "components/Empty";
 import { WarningIcon } from "@chakra-ui/icons";
 
 const url =
-	process.env.NEXT_PUBLIC_API_DOMAIN || "http://54.203.56.186:30018/api/chat";
+	process.env.NEXT_PUBLIC_API_DOMAIN ||
+	"https://knn3-gateway.knn3.xyz/nl/api/chat";
 
 const list: any = [];
 
