@@ -136,7 +136,7 @@ export default function Home() {
 										<>
 											<Box
 												key={index}
-												bg="gray.100"
+												bg="gray.200"
 												px={4}
 												py={2}
 												borderRadius={3}
@@ -170,7 +170,7 @@ export default function Home() {
 									) : (
 										<Box key={index} w="full" px={4} py={2} borderRadius={3}>
 											<VStack
-												bg="gray.100"
+												bg="gray.200"
 												key={index}
 												w="calc(100% - 60px)"
 												px={4}
