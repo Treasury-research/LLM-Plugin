@@ -58,11 +58,10 @@ export default function Home() {
 		setIsLoading.on();
 
 		try {
+			
 			const result = await axios.get("/api/chat", {
 				params: { chat_id: chat_id.trim(), nl_input: nl_input.trim() },
 			});
-
-			console.log(result);
 
 			if (result.status === 200) {
 				list.push(result.data);
@@ -163,7 +162,7 @@ export default function Home() {
 											</Box>
 										</Flex>
 									) : (
-										<Box key={index} w="full" px={4} py={2} borderRadius={3}>
+										<Box key={index} w="full" py={2} borderRadius={3}>
 											<VStack
 												bg="gray.200"
 												key={index}

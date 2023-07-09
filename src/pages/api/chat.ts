@@ -22,7 +22,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 			}
 		);
 
-		console.log("==========result", result);
+		// console.log("==========result", result);
 		if (result.status === 200) {
 			res.status(200).json(result.data);
 		} else {
@@ -32,7 +32,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 			});
 		}
 	} catch (error:any) {
-		console.log(error);
+		// console.log(error);
 		res.status(500).json({
 			code: -1,
 			data: error.message,
