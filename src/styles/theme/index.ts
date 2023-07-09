@@ -1,5 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-import type { GlobalStyleProps } from "@chakra-ui/theme-tools";
+// import type { GlobalStyleProps } from "@chakra-ui/theme-tools";
 
 import { colors } from "./colors";
 import * as components from "./components";
@@ -20,7 +20,7 @@ const customTheme = extendTheme({
 		...components,
 	},
 	styles: {
-		global: (props: GlobalStyleProps) => ({
+		global: (props: { colorMode: string }) => ({
 			body: {
 				bg: props.colorMode === "light" ? "#f5f5f5" : "#000",
 			},

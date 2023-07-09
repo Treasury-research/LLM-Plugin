@@ -10,7 +10,7 @@ const Empty = ({
 	return (
 		<VStack h={height || "90%"} justifyContent="center">
 			<Image src="/images/empty.png" opacity={0.4} width="48px" />
-			<Text fontSize="sm" color="spxGrayText.500" fontWeight="semibold">
+			<Text fontSize="sm" color="gray.500" fontWeight="semibold" mt={1}>
 				{message || "No Data"}
 			</Text>
 		</VStack>

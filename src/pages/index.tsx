@@ -30,8 +30,10 @@ import BeatLoader from "react-spinners/BeatLoader";
 import Empty from "components/Empty";
 import { WarningIcon } from "@chakra-ui/icons";
 
-// const url = "https://knn3-gateway.knn3.xyz/nl/api/chat";
-const url = "http://54.203.56.186:30018/api/chat";
+const url =
+	process.env.NEXT_PUBLIC_API_DOMAIN ||
+	"https://knn3-gateway.knn3.xyz/nl/api/chat";
+
 const list: any = [];
 
 export default function Home() {
@@ -44,7 +46,7 @@ export default function Home() {
 	const [isLoading, setIsLoading] = useBoolean(false);
 	const [chatCode, setChatCode] = useState("");
 
-	console.log(chatCode, chatList);
+	// console.log(chatCode, chatList);
 
 	const addChat = () => {
 		const code = new Date().getTime().toString();
@@ -113,7 +115,7 @@ export default function Home() {
 				py={5}
 			>
 				{chatList.length === 0 && (
-					<Box h="calc(100% - 80px)" w="full">
+					<Box h="100%" w="full" pt="150px">
 						<Empty message="No chat content" />
 					</Box>
 				)}
