@@ -4,10 +4,13 @@ const nextConfig = {
   swcMinify: true,
 }
 
-const nextEnv = require('next-env');
-const dotenvLoad = require('dotenv-load');
+const removeImports = require('next-remove-imports')();
+module.exports = removeImports({});
 
-dotenvLoad('.env');
+// const nextEnv = require('next-env');
+// const dotenvLoad = require('dotenv-load');
 
-const withNextEnv = nextEnv();
-module.exports = withNextEnv(nextConfig)
+// dotenvLoad('.env');
+
+// const withNextEnv = nextEnv();
+// module.exports = withNextEnv(nextConfig)
