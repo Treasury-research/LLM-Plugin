@@ -45,6 +45,7 @@
 		"uuid": "^9.0.0"
 	},
 	"devDependencies": {
-		"@types/uuid": "^9.0.2"
+		"@types/uuid": "^9.0.2",
+		"autoprefixer": "^10.4.14"
 	}
 }
